@@ -70,3 +70,8 @@ node index.js
 ## Fitur Bonus
 - `/batch-predict` dan `/batch-classify` untuk prediksi multiple data sekaligus
 - Circuit Breaker di Express: otomatis open setelah 3 kegagalan, reset setelah 30 detik
+
+## Server Deployment (Bonus)
+Service juga berjalan di server:
+- Python ML Service: http://103.147.92.134:3111/health
+- Express Gateway: http://103.147.92.134:3112/health
