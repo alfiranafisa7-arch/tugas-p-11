@@ -1,0 +1,78 @@
+{
+  "info": {
+    "name": "Tugas P11 - Python ML Service",
+    "_postman_id": "tugas-p11-collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Python ML - Health",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3111/health"
+      }
+    },
+    {
+      "name": "Python ML - Predict",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:3111/predict",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"features\": [5.1, 3.5, 1.4, 0.2]}"
+        }
+      }
+    },
+    {
+      "name": "Python ML - Batch Predict",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:3111/batch-predict",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"data\": [[5.1,3.5,1.4,0.2],[6.7,3.0,5.2,2.3]]}"
+        }
+      }
+    },
+    {
+      "name": "Gateway - Health",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3112/health"
+      }
+    },
+    {
+      "name": "Gateway - Info",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3112/api/info"
+      }
+    },
+    {
+      "name": "Gateway - Classify",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:3112/api/classify",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"features\": [5.1, 3.5, 1.4, 0.2], \"user\": \"mahasiswa\"}"
+        }
+      }
+    },
+    {
+      "name": "Gateway - Batch Classify",
+      "request": {
+        "method": "POST",
+        "url": "http://localhost:3112/api/batch-classify",
+        "header": [{"key": "Content-Type", "value": "application/json"}],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"data\": [[5.1,3.5,1.4,0.2],[6.7,3.0,5.2,2.3],[4.9,3.0,1.4,0.2]]}"
+        }
+      }
+    }
+  ]
+}
