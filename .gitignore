@@ -1,0 +1,5 @@
+python-ml/venv/
+python-ml/model.pkl
+python-ml/scaler.pkl
+python-ml/__pycache__/
+express-gateway/node_modules/
